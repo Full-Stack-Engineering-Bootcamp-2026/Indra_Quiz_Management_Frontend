@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-
+import { Link } from "react-router-dom";
 import { login } from "@/store/slices/authSlice";
 import { Button } from "./ui/button";
 
@@ -99,6 +99,16 @@ export default function LoginPage() {
           >
             {loading ? "Loading..." : "Login"}
           </Button>
+
+          <div className="text-center text-sm">
+            Don't have an account?{" "}
+            <Link
+              to="/registraion"
+              className="font-semibold text-black hover:underline"
+            >
+              Register
+            </Link>
+          </div>
         </form>
       </div>
     </div>
